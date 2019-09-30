@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 2019_09_30_120839) do
   create_table "requests", force: :cascade do |t|
     t.integer "team_id"
     t.integer "user_id"
-    t.integer "question_id"
     t.string "name"
     t.integer "age"
     t.string "skills"

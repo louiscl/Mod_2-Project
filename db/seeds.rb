@@ -14,4 +14,4 @@ Question.create(question_text: 'Why you?', team_id: 1)
 
 Answer.create(answer_input: 'Because', question_id: 1, user_id:1)
 
-Request.create(name: 'Haami', age: 23, skills: 'Art analysis', question_id: 1, user_id: 1, team_id:1)
+Request.create(name: 'Haami', age: 23, skills: 'Art analysis', user_id: 1, team_id:1)
