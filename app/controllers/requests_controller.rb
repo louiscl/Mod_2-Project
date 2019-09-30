@@ -25,7 +25,6 @@ class RequestsController < ApplicationController
   # POST /requests
   # POST /requests.json
   def create
-    byebug
     @request = Request.new(request_params)
 
     respond_to do |format|
