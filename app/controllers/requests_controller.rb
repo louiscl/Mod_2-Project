@@ -25,8 +25,12 @@ class RequestsController < ApplicationController
   # POST /requests
   # POST /requests.json
   def create
-    byebug
-    @request = Request.new(request_params)
+  
+  @request = Request.new(request_params)
+   @request.team_id = request.url.split('/')[4] #added this to get a default team id
+
+
+
 
     respond_to do |format|
       if @request.save
@@ -71,6 +75,7 @@ class RequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def request_params
+      @team_id = request.url.split('/')[4]
       params.require(:request).permit(:team_id, :user_id, :question_id, :name, :age, :skills)
     end
 end
