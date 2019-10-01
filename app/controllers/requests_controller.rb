@@ -20,18 +20,18 @@ class RequestsController < ApplicationController
 
   # GET /requests/1/edit
   def edit
+
   end
 
   # POST /requests
   # POST /requests.json
   def create
-
-  @request = Request.new(request_params)
+  @request = Request.new(name: params[:name], age: params[:age], skills: params[:skills])
    @request.team_id = request.url.split('/')[4] #added this to get a default team id
-
+    @request.user_id = session[:user_id]
     respond_to do |format|
       if @request.save
-        format.html { redirect_to @request, notice: 'Request was successfully created.' }
+        format.html { redirect_to new_answer_path, notice: 'Request was successfully created.' }
         format.json { render :show, status: :created, location: @request }
       else
         format.html { render :new }
@@ -72,7 +72,7 @@ class RequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def request_params
-      @team_id = request.url.split('/')[4]
-      params.require(:request).permit(:team_id, :user_id, :question_id, :name, :age, :skills)
+      byebug
+      params.require(:request).permit(:team_id, :user_id, :name, :age, :skills)
     end
 end

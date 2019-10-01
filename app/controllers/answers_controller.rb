@@ -14,6 +14,7 @@ class AnswersController < ApplicationController
 
   # GET /answers/new
   def new
+    @team_id = request.url.split('/')[4]
     @answer = Answer.new
   end
 
@@ -24,8 +25,9 @@ class AnswersController < ApplicationController
   # POST /answers
   # POST /answers.json
   def create
-    @answer = Answer.new(answer_params)
-
+    @answer = Answer.new(answer_input: params[:answer_input])
+    @answer.question_id = Question.find_by(team_id: request.url.split('/')[4]).id #added this to get a default team id
+     @answer.user_id = session[:user_id]
     respond_to do |format|
       if @answer.save
         format.html { redirect_to @answer, notice: 'Answer was successfully created.' }
@@ -42,7 +44,7 @@ class AnswersController < ApplicationController
   def update
     respond_to do |format|
       if @answer.update(answer_params)
-        format.html { redirect_to @answer, notice: 'Answer was successfully updated.' }
+        format.html { redirect_to @answer, notice: 'Thank you for submitting your answer.' }
         format.json { render :show, status: :ok, location: @answer }
       else
         format.html { render :edit }

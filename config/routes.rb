@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :requests, only: [:index, :show, :edit, :destroy]
-  resources :answers
+  resources :answers, only: [:index, :show, :edit, :destroy]
   resources :questions
   resources :applications
   resources :teams
@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   post '/teams/:id/requests', to: 'requests#create'
   delete '/sessions', to: 'sessions#destroy'
 
+  get 'teams/:id/answers/new', to: 'answers#new', as: 'new_answer'
+  post '/teams/:id/answers', to: 'answers#create'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
   
