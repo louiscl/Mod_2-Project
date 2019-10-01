@@ -100,11 +100,34 @@ img {
 /*******************************************/
 
 
-.field {
-    background: black ;
-    color : white;
-    padding: 5px 5px 5px 5px;
+.field, p, h1 {
+    
+    color : black;
+    justify: center;
+    text-align: center;
+    font-family: Arial,
 }
 
+.form-container 
 
+{   background: white ;
+    
+    width:32%;
+      height:450px;
+      margin: 0 auto;
+      border-radius: 5px;
+      border-style:solid;
+
+
+      padding-top: 75px;
+
+    
+
+}
+
+body {
+    background-image: url("https://images.pexels.com/photos/1092364/pexels-photo-1092364.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+   
+background-size: cover;
+}
 
