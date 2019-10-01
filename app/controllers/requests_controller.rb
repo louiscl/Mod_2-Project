@@ -25,12 +25,9 @@ class RequestsController < ApplicationController
   # POST /requests
   # POST /requests.json
   def create
-  
+
   @request = Request.new(request_params)
    @request.team_id = request.url.split('/')[4] #added this to get a default team id
-
-
-
 
     respond_to do |format|
       if @request.save
