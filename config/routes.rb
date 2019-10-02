@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :admins
   resources :requests, only: [:index, :show, :edit, :destroy]
   resources :answers, only: [:index, :show, :edit, :destroy]
   resources :questions
