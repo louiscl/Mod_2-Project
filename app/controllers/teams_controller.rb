@@ -50,8 +50,9 @@ class TeamsController < ApplicationController
     end
   end
 
-  def your_teams
+  def my_team
     authorize_gold_user
+    
   end
 
   private

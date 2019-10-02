@@ -13,4 +13,7 @@ class User < ApplicationRecord
     #     self.role ||= :student
     # end
 
+
+    # find answers according to team / question
+    #self.answers.where(Question.find(self.question_id) == team.question)
 end
