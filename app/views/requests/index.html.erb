@@ -7,7 +7,6 @@
     <tr>
       <th>Team</th>
       <th>User</th>
-      <th>Question</th>
       <th>Name</th>
       <th>Age</th>
       <th>Skills</th>
@@ -20,7 +19,6 @@
       <tr>
         <td><%= request.team_id %></td>
         <td><%= request.user_id %></td>
-        <td><%= request.question_id %></td>
         <td><%= request.name %></td>
         <td><%= request.age %></td>
         <td><%= request.skills %></td>
@@ -33,5 +31,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Request', new_request_path %>
