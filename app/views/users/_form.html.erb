@@ -1,7 +1,4 @@
 
-
-
-
     <body>
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
@@ -15,6 +12,9 @@
       </ul>
     </div>
   <% end %>
+  <div class= "login-container">
+  <div class="login-form">
+    <h1>Sign up!</h1>
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
@@ -40,6 +40,9 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+  </div>
+  </div>
+  
 <% end %>
 
 </body>

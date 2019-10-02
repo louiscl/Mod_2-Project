@@ -1,23 +1,52 @@
-// // Place all the styles related to the Teams controller here.
-// // They will automatically be included in application.css.
-// // You can use Sass (SCSS) here: http://sass-lang.com/
+.parent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: space-around;
+        align-items: center;
 
-// table 
+        }
+    .div1 { 
+   
+    background-color: white;
+    border-style: solid 1px;
+    border-radius: 2.5px;
 
-// {   background: white ;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    text-align: center;
+    width: 500px;
+
+    margin-bottom: 20px;
+    overflow-wrap: break-word;
+    }
+
+    .div2 { 
+   
+        background-color: white;
+        border-style: solid 1px;
     
-//     width:32%;
-      
+        order: 0;
+        flex: 0 1 auto;
+        align-self: auto;
     
-//       margin: 0 auto;
-//       border-radius: 2px;
-//       border-style:solid;
+        margin-bottom: 20px;
+        overflow-wrap: break-word;
+
+        width: 500px;
+
+    
+        }
+    
 
 
-      
-      
-// }
 
+    h1{ 
 
-// link { border-style: solid;
-// }
+    }
+
+    link{
+        background-color: black;
+
+    }
