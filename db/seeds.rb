@@ -8,7 +8,7 @@
 
 Team.create(company: 'Start-up_1', industry: 'tech', description: 'test')
 
-User.create(name: 'Haami', email: 'haami@gmail.com', age: 23, password_digest: 'haami')
+User.create(name: 'Haami', email: 'haami@gmail.com', age: 23, password: 'haami')
 
 Question.create(question_text: 'Why you?', team_id: 1)
 

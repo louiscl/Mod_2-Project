@@ -1,8 +1,10 @@
+
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
 <p id="notice"><%= notice %></p>
 
 <h1>Teams</h1>
 
-<table>
+<table class= "container">
   <thead>
     <tr>
       <th>Company</th>
@@ -16,9 +18,9 @@
       <tr>
         <td><%= team.company %></td>
         <td><%= team.industry %></td>
-        <td><%= link_to 'Show', team %></td>
-        <td><%= link_to 'Edit', edit_team_path(team) %></td>
-        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Find out more', team %></td>
+       <div class = "link"> <td><%=link_to 'Edit', edit_team_path(team) %></td></div>
+        <td><%link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
