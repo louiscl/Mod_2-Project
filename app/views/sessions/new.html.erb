@@ -1,28 +1,40 @@
-<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
 
-<div class= log-in-form>   <%= form_tag sessions_path do %>
+  <body>
+  <div class = "welcome-container">
+      <div class = "welcome">
+        <h2>Welcome to Co-Finder, the best way to find co-founders and build teams!</h2>
+      </div>
 
 
-<h2>Login to see our teams! </h2>
-  
-  <p><%= label :user, :email %></p>
-
-  <div class= form-border>
-  <p><%= text_field :user, :email %> </p>
   </div>
 
-    <p><%= label :user, :password %></p>
 
-    <div class= form-border>
+<div class= "login-container" >   
+  <div class= "login-form" >   
+  <%= form_tag sessions_path do %>
+
+
+    <h2>Login to see our available teams! </h2>
+    
+    
+    <p><%= label :user, :email %></p>
+    <div>
+    <p><%= text_field :user, :email %> </p>
+    </div>
+
+    <p><%= label :user, :password %></p>
+    <div >
     <p><%= password_field :user, :password %></p>
     </div>
 
+
     <%= submit_tag "Log In" %>
-
+    <%end%>  
     <%= link_to 'Sign Up!', new_user_path %>
-<%end%>  
-
-
-<div class= "logo">
+  </div>
 
 </div>
+
+
+</body>
+

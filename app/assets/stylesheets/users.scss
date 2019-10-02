@@ -1,157 +1,44 @@
-// // Place all the styles related to the Users controller here.
-// // They will automatically be included in application.css.
-// // You can use Sass (SCSS) here: http://sass-lang.com/
+.login-container{
 
-// /* 
-// Project Name: MOD 2 project 
-// Client: 
-// Author: 
-// */
-
-// /******************************************
-// /* COLOUr
-// /*******************************************/
-
-// /* add a list of colours used in the project */
-
-// /******************************************
-// /* SENSIBLE DEFAULTS                   
-// /*******************************************/
-
-// * {
-//     box-sizing: border-box;
-// }
-// img {
-//    max-width:100%;
-// }
-
-// /******************************************
-// /* TYPOGRAPHY
-// /*******************************************/
-
-// /* add type styles here */
-
-
-// /******************************************
-// /* LAYOUT                   
-// /*******************************************/
-
-// .site-container {
-//    max-width: 960px;
-//    margin: 0 auto;
-// }
-
-// .site-header {
-
-// }
-// .site-content {
-
-// }
-// .site-footer {
-
-// }
-
-// /******************************************
-// /* GRID
-// /*******************************************/
-
-// .grid-row {
-//    max-width:1300px;
-//    margin:0 auto;
-// }
-// .grid-column {
-//    float:left;
-//    padding:0 32px;
-// }
-// .grid-whole         { width:100% }
-// .grid-three-quarter { width: 75%;
-//                        float: left; }
-// .grid-two-third     { width:66.67% }
-// .grid-half          { width:50% }
-// .grid-third         { width:33.33% }
-// .grid-quarter       { width:25%;
-//                        float:left; }
-
-
-// /******************************************
-// /* HELPER CLASSES
-// /*******************************************/
-
-// /* Clearfix */
-// .clearfix:before,
-// .clearfix:after {
-//     content: " ";
-//     display: table;
-// }
-// .clearfix:after {
-//     clear:both;
-// }
-
-// .is-hidden {
-//     display: none;
-// }
-// .is-visible {
-//     display: block;
-// }
-
-
-// /******************************************
-// /* ADDITIONAL STYLES                   
-// /*******************************************/
-
-
-// .field, p, h1, h2, th, td, tbody, body{
+    color: black;
+        
+    // border-style: solid;
+     display: flex;
+    justify-content: center;
+    align-items : stretch
     
-//     color : black;
-//     justify: center;
-//     text-align: center;
-//     font-family: 'Playfair Display', serif;
-//     font-size: 20px;
-//     background: white;
-
-//     width: 32%;
-// padding: auto ;
-// }
-
-// input{
-//     border-style: solid;
-
-// }
-
-
-
-
-
-
-
-
-
-// .log-in-form {
-
-//     background: white ;
+    }
+    .login-form{
+        
+    border: 1px solid rgb(17, 16, 16);
+    width: 300px;
+    background-color: white;
+    height: 300px;
+    margin: center;
     
-//     width:30%;
-//       height:30%;  
-      
-//       border-radius: 2px;
-//       border-style:solid;
-//       margin-top: 100px;
-
+    }
     
-// }
+    form{
+    text-align:center;
+        
+    }
 
-// body {
-//     background-image: url("https://www.officelovin.com/wp-content/uploads/2016/02/bubble-prague-office-111.jpg");
-   
-// background-size: cover;
-// }
+    h1, h2, h3, p{
+        text-align:center;
+        color: black ;
+
+    }
+
+    .page-header{
+
+        background-color: white;
+        border-style: solid;
+        margin-bottom: 30px;
+        margin-top: 50px;
+
+    }
 
 
-// .logo {
-//     image:url("C:\Desktop\C0-finder.png");
-//     z-index: -2;
-
-
- 
-
-// }
+input{
+    border-style: 0.5px solid;
+}

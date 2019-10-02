@@ -1,3 +1,57 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+.login-container{
+
+color: black;
+    
+// border-style: solid;
+ display: flex;
+justify-content: flex-start;
+align-items : stretch
+
+}
+.login-form{
+
+width: 300px;
+background-color:rgb(255, 255, 255);
+height: 300px;
+margin: center;
+
+
+}
+
+form{
+text-align:center;
+    
+}
+
+h1 {
+    font-family: 'Playfair Display', serif; 
+}
+
+.welcome-container {
+    color: black;
+   background-color: white;
+    border-style: solid 1px;
+    display: flex;
+    justify-content: flex-end;
+     width: 400px;
+     margin-left: auto;
+    flex-direction: column;
+
+
+}
+
+.welcome {
+
+
+}
+
+input{
+    border-style: solid;
+}

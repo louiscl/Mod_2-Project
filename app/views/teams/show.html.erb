@@ -1,6 +1,8 @@
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
 <p id="notice"><%= notice %></p>
+<div class= "parent">
 
+<div class ="div2">
 <p>
 Company:
   <%= @team.company %>
@@ -18,3 +20,6 @@ Industry:
 <% link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>
 <%= button_to 'Apply', new_request_path , method: :get%>
+
+</div>
+</div>

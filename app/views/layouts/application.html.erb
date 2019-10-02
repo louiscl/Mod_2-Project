@@ -7,19 +7,35 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
   </head>
 
-  <body>
-    <% if current_user %>
-    <%= "Current user: #{current_user.name}"%> <br>
+  <div class="topnav">
+      <a class="active" href="/teams">Home</a>
+      <!-- <a href="">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a> -->
+      <% if current_user %>
+    <%= "Current user: #{current_user.name}"%>
     <%= link_to 'Log out', sessions_path, method: :delete %>
     <% else %>
     <%= link_to 'Log in', new_session_path%>
+
+    <div class="logo-image">
+        <%= image_tag 'https://ibb.co/TDQYr2B' %>
+      </div>
+
     <%end%>
 
+   </div>
+
+  <body>
     <% if flash[:notice]%>
     <h4><%= flash[:notcie] %></h4>
     <%end%>
     <%= yield %>
   </body>
+
+
 </html>
+

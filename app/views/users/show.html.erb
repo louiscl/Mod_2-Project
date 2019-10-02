@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
+<div class= "login-container">
+  <div class= "login-form">
 
-<p>
+ <p>
   <strong>Name:</strong>
   <%= @user.name %>
 </p>
@@ -19,6 +21,8 @@
   <!-- <strong>Password:</strong> -->
   <% @user.password_digest %>
 </p>
+</div>
+</div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Login', new_session_path %>
