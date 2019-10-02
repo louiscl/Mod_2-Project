@@ -1,7 +1,4 @@
 
-
-
-
     <body>
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
@@ -36,6 +33,12 @@
     <%= form.label :password %>
     <%= form.password_field :password %>
   </div>
+
+  <div class="field">
+  <%= form.label :Membership%>
+  <%= form.select(:role, options_for_select([['Standard Member', 'standard_user'], ['Gold Member', 'gold_user']]))%>
+  </div>
+
 
   <div class="actions">
     <%= form.submit %>

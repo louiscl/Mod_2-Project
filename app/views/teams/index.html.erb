@@ -27,5 +27,6 @@
 </table>
 
 <br>
-
+<% unless current_user == nil || current_user.standard_user? %>
 <%= link_to 'New Team', new_team_path %>
+<%end%>
