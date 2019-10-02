@@ -1,133 +1,157 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// // Place all the styles related to the Users controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/* 
-Project Name: MOD 2 project 
-Client: 
-Author: 
-*/
+// /* 
+// Project Name: MOD 2 project 
+// Client: 
+// Author: 
+// */
 
-/******************************************
-/* COLOUr
-/*******************************************/
+// /******************************************
+// /* COLOUr
+// /*******************************************/
 
-/* add a list of colours used in the project */
+// /* add a list of colours used in the project */
 
-/******************************************
-/* SENSIBLE DEFAULTS                   
-/*******************************************/
+// /******************************************
+// /* SENSIBLE DEFAULTS                   
+// /*******************************************/
 
-* {
-    box-sizing: border-box;
-}
-img {
-   max-width:100%;
-}
+// * {
+//     box-sizing: border-box;
+// }
+// img {
+//    max-width:100%;
+// }
 
-/******************************************
-/* TYPOGRAPHY
-/*******************************************/
+// /******************************************
+// /* TYPOGRAPHY
+// /*******************************************/
 
-/* add type styles here */
-
-
-/******************************************
-/* LAYOUT                   
-/*******************************************/
-
-.site-container {
-   max-width: 960px;
-   margin: 0 auto;
-}
-
-.site-header {
-
-}
-.site-content {
-
-}
-.site-footer {
-
-}
-
-/******************************************
-/* GRID
-/*******************************************/
-
-.grid-row {
-   max-width:1300px;
-   margin:0 auto;
-}
-.grid-column {
-   float:left;
-   padding:0 32px;
-}
-.grid-whole         { width:100% }
-.grid-three-quarter { width: 75%;
-                       float: left; }
-.grid-two-third     { width:66.67% }
-.grid-half          { width:50% }
-.grid-third         { width:33.33% }
-.grid-quarter       { width:25%;
-                       float:left; }
+// /* add type styles here */
 
 
-/******************************************
-/* HELPER CLASSES
-/*******************************************/
+// /******************************************
+// /* LAYOUT                   
+// /*******************************************/
 
-/* Clearfix */
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-.clearfix:after {
-    clear:both;
-}
+// .site-container {
+//    max-width: 960px;
+//    margin: 0 auto;
+// }
 
-.is-hidden {
-    display: none;
-}
-.is-visible {
-    display: block;
-}
+// .site-header {
+
+// }
+// .site-content {
+
+// }
+// .site-footer {
+
+// }
+
+// /******************************************
+// /* GRID
+// /*******************************************/
+
+// .grid-row {
+//    max-width:1300px;
+//    margin:0 auto;
+// }
+// .grid-column {
+//    float:left;
+//    padding:0 32px;
+// }
+// .grid-whole         { width:100% }
+// .grid-three-quarter { width: 75%;
+//                        float: left; }
+// .grid-two-third     { width:66.67% }
+// .grid-half          { width:50% }
+// .grid-third         { width:33.33% }
+// .grid-quarter       { width:25%;
+//                        float:left; }
 
 
-/******************************************
-/* ADDITIONAL STYLES                   
-/*******************************************/
+// /******************************************
+// /* HELPER CLASSES
+// /*******************************************/
+
+// /* Clearfix */
+// .clearfix:before,
+// .clearfix:after {
+//     content: " ";
+//     display: table;
+// }
+// .clearfix:after {
+//     clear:both;
+// }
+
+// .is-hidden {
+//     display: none;
+// }
+// .is-visible {
+//     display: block;
+// }
 
 
-.field, p, h1 {
+// /******************************************
+// /* ADDITIONAL STYLES                   
+// /*******************************************/
+
+
+// .field, p, h1, h2, th, td, tbody, body{
     
-    color : black;
-    justify: center;
-    text-align: center;
-    font-family: Arial,
-}
+//     color : black;
+//     justify: center;
+//     text-align: center;
+//     font-family: 'Playfair Display', serif;
+//     font-size: 20px;
+//     background: white;
 
-.form-container 
+//     width: 32%;
+// padding: auto ;
+// }
 
-{   background: white ;
+// input{
+//     border-style: solid;
+
+// }
+
+
+
+
+
+
+
+
+
+// .log-in-form {
+
+//     background: white ;
     
-    width:32%;
-      height:450px;
-      margin: 0 auto;
-      border-radius: 5px;
-      border-style:solid;
-
-
-      padding-top: 75px;
+//     width:30%;
+//       height:30%;  
+      
+//       border-radius: 2px;
+//       border-style:solid;
+//       margin-top: 100px;
 
     
+// }
 
-}
-
-body {
-    background-image: url("https://images.pexels.com/photos/1092364/pexels-photo-1092364.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+// body {
+//     background-image: url("https://www.officelovin.com/wp-content/uploads/2016/02/bubble-prague-office-111.jpg");
    
-background-size: cover;
-}
+// background-size: cover;
+// }
 
+
+// .logo {
+//     image:url("C:\Desktop\C0-finder.png");
+//     z-index: -2;
+
+
+ 
+
+// }

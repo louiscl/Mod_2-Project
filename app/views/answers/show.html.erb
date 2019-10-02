@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Answer input:</strong>
+  <strong>Your Answer:</strong>
   <%= @answer.answer_input %>
 </p>
 
@@ -11,9 +11,11 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @answer.user_id %>
+  <strong>name:</strong>
+  <%= @answer.user.name %>
 </p>
 
-<%= link_to 'Edit', edit_answer_path(@answer) %> |
-<%= link_to 'Back', answers_path %>
+<%link_to 'Edit', edit_answer_path(@answer) %> |
+<%= link_to 'See more teams!', teams_path %> |
+
+

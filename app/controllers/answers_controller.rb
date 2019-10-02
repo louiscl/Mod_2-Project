@@ -20,6 +20,9 @@ class AnswersController < ApplicationController
 
   # GET /answers/1/edit
   def edit
+    
+    @team_id = request.url.split('/')[4]
+    
   end
 
   # POST /answers

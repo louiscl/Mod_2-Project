@@ -1,14 +1,28 @@
-<h2>Login</h2>
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+
+<div class= log-in-form>   <%= form_tag sessions_path do %>
 
 
-<%= form_tag sessions_path do %>
+<h2>Login to see our teams! </h2>
+  
+  <p><%= label :user, :email %></p>
 
-    <%= label :user, :email %>
-    <%= text_field :user, :email %>
+  <div class= form-border>
+  <p><%= text_field :user, :email %> </p>
+  </div>
 
-    <%= label :user, :password %>
-    <%= password_field :user, :password %>
+    <p><%= label :user, :password %></p>
+
+    <div class= form-border>
+    <p><%= password_field :user, :password %></p>
+    </div>
 
     <%= submit_tag "Log In" %>
 
+    <%= link_to 'Sign Up!', new_user_path %>
 <%end%>  
+
+
+<div class= "logo">
+
+</div>
