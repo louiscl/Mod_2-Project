@@ -39,7 +39,7 @@
 
     
 
-  <% unless current_user == nil || current_user.standard_user? %>
+  <% if current_user.class == Admin %>
   <%= link_to 'New Team', new_team_path %>
   <%end%>
     
