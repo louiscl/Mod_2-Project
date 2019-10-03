@@ -18,6 +18,8 @@ Industry:
   <%= @team.description %>
 </p>
 
+
+
 <% link_to 'Edit', edit_team_path(@team) %> 
 <p><%= link_to 'Back', teams_path %></p>
 <%= button_to 'Apply', new_request_path , method: :get%>

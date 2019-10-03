@@ -20,6 +20,7 @@
     font-family: 'Be Vietnam', sans-serif;
     font-size:40px;
     
+    
  }
  html, body{
     margin:0px;
@@ -28,10 +29,13 @@
 
 
 body{ 
-    background-image: url( "http://hdwpro.com/wp-content/uploads/2016/03/Natural-Ultra-HD-Wallpaper.jpg");
+
+    background-image: url( "https://mocah.org/uploads/posts/5391386-clouds-trees-foggy-slope-tree-haze-fade-monochrome-black-and-white-white-black-desktop-background-wallpaper-cloud-mist-fog-mountain-minimal-simple-free-pictures.jpg");
+  
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Be Vietnam', sans-serif;
+    position: relative;
 }
  
 p {
@@ -99,7 +103,7 @@ h1{
 
 
 .footer {
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     left: 0;

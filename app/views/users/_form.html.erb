@@ -41,8 +41,10 @@
   <%= form.label :Membership%>
   <%= form.select(:role, options_for_select([['Standard Member', 'standard_user'], ['Gold Member', 'gold_user']]))%>
   </div>
-
-
+  <div class="field">
+<%= form.label "profile photo"%>
+<%= form.file_field :avatar %>
+</div>
   <div class="actions">
     <%= form.submit %>
   </div>
