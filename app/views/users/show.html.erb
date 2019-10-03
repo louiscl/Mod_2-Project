@@ -21,8 +21,10 @@
   <!-- <strong>Password:</strong> -->
   <% @user.password_digest %>
 </p>
+<p><%=link_to 'See our opputunities', teams_path %></p>
+<p></p>
 </div>
 </div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Edit', edit_user_path(@user) %> 
 <%= link_to 'Login', new_session_path %>

@@ -20,6 +20,7 @@ class TeamsController < ApplicationController
     @team = Team.new(company: params[:team][:company], industry: params[:team][:industry], description: params[:team][:description])
     @team.admin_id = session[:admin_id]
     #double check params[:id]
+
     respond_to do |format|
       if @team.save
         @question = Question.new(question_text: params[:team][:question], team_id: @team.id)
@@ -46,6 +47,7 @@ class TeamsController < ApplicationController
   end
 
   def destroy
+    @team = Team.find(params[:id])
     @team.destroy
     respond_to do |format|
       format.html { redirect_to teams_url, notice: 'Team was successfully destroyed.' }
