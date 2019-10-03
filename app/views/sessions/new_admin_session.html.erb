@@ -11,33 +11,29 @@
 
 <div class= "login-container" >   
   <div class= "login-form" >   
-  <%= form_tag sessions_path do %>
+  <%= form_tag admin_session_path do %>
 
 
-    <h2>Login to see our available teams! </h2>
+    <h2>Login as an Admin! </h2>
     
     
-    <p><%= label :user, :email %></p>
+    <p><%= label :admin, :email %></p>
     <div>
-    <p><%= text_field :user, :email %> </p>
+    <p><%= text_field :admin, :email %> </p>
     </div>
 
-    <p><%= label :user, :password %></p>
+    <p><%= label :admin, :password %></p>
     <div >
-    <p><%= password_field :user, :password %></p>
+    <p><%= password_field :admin, :password %></p>
     </div>
 
 
     <%= submit_tag "Log In" %>
     <%end%>  
-    
-    <p><%= link_to 'Sign Up!', new_user_path %></p>
-    <p><%= link_to 'Admin login', new_admin_session_path %></p>
-
+    <%= link_to 'Sign Up as admin', new_admin_path %>
   </div>
 
 </div>
-
 
 
 </body>

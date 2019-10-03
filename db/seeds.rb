@@ -6,12 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Team.create(company: 'Start-up_1', industry: 'tech', description: 'test')
+Admin.create(name: 'Louis', email: 'louis@gmail.com')
 
-User.create(name: 'Haami', email: 'haami@gmail.com', age: 23, password: 'haami')
+Team.create(company: 'Start-up Factory', industry: 'tech', description: 'test', admin_id: 1)
+Team.create(company: 'The Company', industry: 'tech', description: 'test', admin_id: 1)
 
 Question.create(question_text: 'Why you?', team_id: 1)
-
-Answer.create(answer_input: 'Because', question_id: 1, user_id:1)
+Question.create(question_text: 'Tell us something about The Company', team_id: 2)
 
 Request.create(name: 'Haami', age: 23, skills: 'Art analysis', user_id: 1, team_id:1)
+
+Answer.create(answer_input: 'Because I am great', question_id: 1, user_id:1)
+Answer.create(answer_input: 'The Company is the greates company', question_id: 2, user_id:1)
