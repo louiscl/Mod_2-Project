@@ -1,10 +1,17 @@
+
+
+
 <% @my_teams.each do |t|%>
+
+    <div class="parent">
+
+    <div class="div1">  <p>
 
     <h2><%= t.company %></h2>
        
         <% t.requests.each do |r| %>
 
-            <p><%= r.name%></p>
+            <h3><%= r.name%></h3>
             <p><%= r.age%></p>
             <p><%= r.skills%></p>
                 <% r.team.questions.each do |q|%>
@@ -14,4 +21,7 @@
                 Question.find_by(team_id: t.id).id => 5 --> 
             <p><%= r.user.answers.find_by(question_id: Question.find_by(team_id: t.id).id).answer_input%></p>
         <%end%>
+
+    </div>
+
 <%end%>

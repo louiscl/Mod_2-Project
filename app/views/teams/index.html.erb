@@ -28,11 +28,13 @@
 <%= team.industry %>
     </p>           
    <p> Description:
-   <%= team.description %><br>
-   <%= link_to 'Find out more', team %><br>
-   <%=link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %>
-    <!-- <div class = "link"> <td><%=link_to 'Edit', edit_team_path(team) %></td></div>
-    <td><%link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+        <%= team.description %><br>
+        <%= link_to 'Find out more', team %><br>
+      <%if current_user.class == Admin%>
+          <%=link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+        <!-- <div class = "link"> <td><%=link_to 'Edit', edit_team_path(team) %></td></div>
+        <td><%link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
    </p>
    </div>
   
