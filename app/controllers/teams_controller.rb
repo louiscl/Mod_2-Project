@@ -9,7 +9,7 @@ class TeamsController < ApplicationController
   end
 
   def new
-    authorize_gold_user
+    authorize_admin
     @team = Team.new
   end
 
@@ -17,10 +17,13 @@ class TeamsController < ApplicationController
   end
 
   def create
-    @team = Team.new(team_params)
-
+    @team = Team.new(company: params[:team][:company], industry: params[:team][:industry], description: params[:team][:description])
+    @team.admin_id = session[:admin_id]
+    #double check params[:id]
     respond_to do |format|
       if @team.save
+        @question = Question.new(question_text: params[:team][:question], team_id: @team.id)
+        @question.save
         format.html { redirect_to @team, notice: 'Team was successfully created.' }
         format.json { render :show, status: :created, location: @team }
       else
@@ -63,6 +66,6 @@ class TeamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_params
-      params.require(:team).permit(:company, :industry, :description)
+      params.require(:team).permit(:company, :industry, :description, :question)
     end
 end

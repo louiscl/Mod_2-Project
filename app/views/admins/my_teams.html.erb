@@ -1,0 +1,17 @@
+<% @my_teams.each do |t|%>
+
+    <h2><%= t.company %></h2>
+       
+        <% t.requests.each do |r| %>
+
+            <p><%= r.name%></p>
+            <p><%= r.age%></p>
+            <p><%= r.skills%></p>
+                <% r.team.questions.each do |q|%>
+                <h3><%= q.question_text %></h3>
+                <%end%>
+                <!-- r.user.answers.find_by(question_id: 5).answer_input
+                Question.find_by(team_id: t.id).id => 5 --> 
+            <p><%= r.user.answers.find_by(question_id: Question.find_by(team_id: t.id).id).answer_input%></p>
+        <%end%>
+<%end%>
