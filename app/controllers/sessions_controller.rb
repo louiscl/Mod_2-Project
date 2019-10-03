@@ -30,7 +30,7 @@ class SessionsController < ApplicationController
         if @admin && @admin.authenticate(params[:admin][:password])
 
             session[:admin_id] = @admin.id
-            redirect_to new_team_path
+            redirect_to "/admins/#{@admin.id}/my_teams"
         else
             flash[:notice] = "No admin / password matching"
             redirect_to new_admin_session_path
