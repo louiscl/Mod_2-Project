@@ -1,21 +1,23 @@
 <p id="notice"><%= notice %></p>
-
+<div class= "answercontainer">
 <p>
-  <strong>Your Answer:</strong>
+Your Answer:
   <%= @answer.answer_input %>
 </p>
 
 <p>
-  <strong>Question:</strong>
+  Question:
   <%= @answer.question_id %>
 </p>
 
 <p>
-  <strong>name:</strong>
+name:
   <%= @answer.user.name %>
 </p>
 
-<%link_to 'Edit', edit_answer_path(@answer) %> |
-<%= link_to 'See more teams!', teams_path %> |
+<%link_to 'Edit', edit_answer_path(@answer) %> 
+<p><%= link_to 'See more teams!', teams_path %></p> 
+
+</div>
 
 

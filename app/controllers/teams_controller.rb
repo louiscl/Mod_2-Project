@@ -17,7 +17,10 @@ class TeamsController < ApplicationController
   end
 
   def create
-    @team = Team.new(team_params)
+    @team = Team.new(company: params[:company], industry: params[:industry], description: params[:description] )
+    @question = Question.create(question_text: params[:question_text], team_id: @team.id)
+
+    byebug
 
     respond_to do |format|
       if @team.save
@@ -43,6 +46,7 @@ class TeamsController < ApplicationController
   end
 
   def destroy
+    @team = Team.find(params[:id])
     @team.destroy
     respond_to do |format|
       format.html { redirect_to teams_url, notice: 'Team was successfully destroyed.' }
@@ -63,6 +67,6 @@ class TeamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_params
-      params.require(:team).permit(:company, :industry, :description)
+      params.require(:team).permit(:company, :industry, :description, :question_text)
     end
 end

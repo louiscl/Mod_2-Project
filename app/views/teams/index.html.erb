@@ -30,6 +30,7 @@
    <p> Description:
    <%= team.description %><br>
    <%= link_to 'Find out more', team %><br>
+   <%=link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %>
     <!-- <div class = "link"> <td><%=link_to 'Edit', edit_team_path(team) %></td></div>
     <td><%link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
    </p>
@@ -40,7 +41,7 @@
     
 
   <% unless current_user == nil || current_user.standard_user? %>
-  <%= link_to 'New Team', new_team_path %>
+  <% link_to 'New Team', new_team_path %>
   <%end%>
     
   </tbody>

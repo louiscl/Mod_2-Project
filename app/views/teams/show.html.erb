@@ -2,6 +2,7 @@
 <p id="notice"><%= notice %></p>
 <div class= "parent">
 
+  
 <div class ="div2">
 <p>
 Company:
@@ -17,8 +18,8 @@ Industry:
   <%= @team.description %>
 </p>
 
-<% link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>
+<% link_to 'Edit', edit_team_path(@team) %> 
+<p><%= link_to 'Back', teams_path %></p>
 <%= button_to 'Apply', new_request_path , method: :get%>
 
 </div>
