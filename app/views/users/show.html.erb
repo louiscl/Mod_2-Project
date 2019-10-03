@@ -17,6 +17,11 @@
   <%= @user.age %>
 </p>
 
+<% if @user.avatar.attached? %>
+<image src="<%=(url_for(@user.avatar))%>" style="max-height:150px;width:290px;">
+
+<%end%>
+
 <p>
   <!-- <strong>Password:</strong> -->
   <% @user.password_digest %>

@@ -13,7 +13,7 @@
     border: 1px solid rgb(17, 16, 16);
     width: 300px;
     background-color: rgba(255, 255, 255, 0.8);
-    height: 300px;
+    height: 400px;
     margin: center;
     
     }
@@ -23,7 +23,7 @@
         
     }
 
-    h1, h2, h3, p{
+    h1, h2, h3, p, image {
         text-align:center;
         color: black ;
 
@@ -56,3 +56,9 @@
 input{
     border-style: 0.5px solid;
 }
+
+image{
+    
+}
+
+

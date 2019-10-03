@@ -8,6 +8,7 @@ class User < ApplicationRecord
     validates_format_of :email, with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
 
     has_secure_password
+    has_one_attached :avatar 
 
     # def set_default_role
     #     self.role ||= :student
