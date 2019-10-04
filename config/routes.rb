@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :admins, only: [:show, :new, :create, :edit, :update, :destroy]
   resources :requests, only: [:index, :show, :edit, :destroy]
-  resources :answers, only: [:show, :edit, :destroy]
+  resources :answers, only: [:index, :show, :edit, :update, :destroy]
   resources :questions
   resources :applications
   resources :teams
