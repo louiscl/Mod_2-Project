@@ -30,7 +30,7 @@
    <p> Description:
         <%= team.description %><br>
         <%= link_to 'Find out more', team %><br>
-      <%if current_user.class == Admin%>
+      <%if current_user.class == Admin && team.admin_id == session[:admin_id]%>
           <%=link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
         <!-- <div class = "link"> <td><%=link_to 'Edit', edit_team_path(team) %></td></div>
