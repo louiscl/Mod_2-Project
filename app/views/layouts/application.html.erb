@@ -13,7 +13,6 @@
   <div class="topnav">
       <a class="active" href="/teams">Home</a>
       
- 
       <% if current_user.class == User %> 
           <p><%= link_to "#{current_user.name}", "/users/#{session[:user_id]}"%></p>
           <%= link_to 'Log out', sessions_path, method: :delete %>
@@ -23,6 +22,7 @@
       <% else %>
           <%= link_to 'Log in', new_session_path%>
       <% end %>
+
 
    </div>
 
