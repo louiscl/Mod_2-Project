@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :admins
+  resources :admins, only: [:show, :new, :create, :edit, :update, :destroy]
   resources :requests, only: [:index, :show, :edit, :destroy]
-  resources :answers, only: [:index, :show, :edit, :destroy]
+  resources :answers, only: [:show, :edit, :destroy]
   resources :questions
   resources :applications
   resources :teams
@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   get '/sessions/new_admin_session', to: 'sessions#new_admin_session', as: 'new_admin_session'
   post '/sessions/new_admin_session', to: 'sessions#create_admin_session', as: 'admin_session'
   delete '/sessions', to: 'sessions#destroy'
-
 
   get 'teams/:id/answers/new', to: 'answers#new', as: 'new_answer'
   post '/teams/:id/answers', to: 'answers#create'
