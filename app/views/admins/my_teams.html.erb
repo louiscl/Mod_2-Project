@@ -8,20 +8,27 @@
     <div class="div1">  <p>
 
     <h2><%= t.company %></h2>
+
+    <div class="line"></div>
        
         <% t.requests.each do |r| %>
-
-            <h3><%= r.name%></h3>
-            <p><%= r.age%></p>
-            <p><%= r.skills%></p>
+            <p>Name: <%= r.name%></p>
+            <p>Age: <%= r.age%></p>
+            <p>Skills: <%= r.skills%></p>
                 <% r.team.questions.each do |q|%>
-                <h3><%= q.question_text %></h3>
+                <p><%= q.question_text %></p>
                 <%end%>
                 <!-- r.user.answers.find_by(question_id: 5).answer_input
                 Question.find_by(team_id: t.id).id => 5 --> 
             <p><%= r.user.answers.find_by(question_id: Question.find_by(team_id: t.id).id).answer_input%></p>
+
+            <div class="line">
+        
+            </div>
         <%end%>
 
     </div>
 
 <%end%>
+
+<h2><%= link_to "Create a Team", new_team_path %></h2>
