@@ -27,9 +27,10 @@
   <% @user.password_digest %>
 </p>
 <p><%=link_to 'Log in to see what teams are looking! ', new_session_path %></p>
-<p></p>
+
+<p><%= link_to 'Edit Profile', edit_user_path(@user) %> </p>
 </div>
 </div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> 
-<%= link_to 'Login', new_session_path %>
+
+<% link_to 'Login', new_session_path %>
