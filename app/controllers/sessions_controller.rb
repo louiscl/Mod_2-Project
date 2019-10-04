@@ -9,7 +9,9 @@ class SessionsController < ApplicationController
     def create
         session[:user_id] = nil
         session[:admin_id] = nil
+        session[:team_ids] = Team.all.map{|t| t.id}
         @user = User.find_by(email: params[:user][:email])
+      
    
         if @user && @user.authenticate(params[:user][:password])
 
@@ -26,6 +28,9 @@ class SessionsController < ApplicationController
     end
 
     def create_admin_session
+        session[:user_id] = nil
+        session[:admin_id] = nil
+        session[:team_ids] = Team.all.map{|t| t.id}
         @admin = Admin.find_by(email: params[:admin][:email])
         if @admin && @admin.authenticate(params[:admin][:password])
 

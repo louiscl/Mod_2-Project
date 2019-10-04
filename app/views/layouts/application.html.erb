@@ -13,16 +13,27 @@
   <div class="topnav">
       <a class="active" href="/teams">Home</a>
       
+      <% if current_user.class == Admin %> 
+      <%= link_to 'My Teams', "/admins/#{session[:admin_id]}/my_teams"%>
+      <%end%>
+      
+      <%if current_user.class == User %>
+        <%= link_to 'Lucky Team', "/teams/#{session[:team_ids].sample}"%>
+      <%end%>
+
+      <%if current_user.class == Admin %>
+        <%= link_to 'Create Team', new_team_path%>
+      <%end%>
+ 
       <% if current_user.class == User %> 
+      <p><%= link_to 'Log out', sessions_path, method: :delete %></p>
           <p><%= link_to "#{current_user.name}", "/users/#{session[:user_id]}"%></p>
-          <%= link_to 'Log out', sessions_path, method: :delete %>
       <% elsif current_user.class == Admin %>
+      <p><%= link_to 'Log out', sessions_path, method: :delete %></p>
           <p><%= link_to "#{current_user.name}", "/admins/#{session[:admin_id]}"%></p>
-          <%= link_to 'Log out', sessions_path, method: :delete %>
       <% else %>
           <%= link_to 'Log in', new_session_path%>
       <% end %>
-
 
    </div>
 
